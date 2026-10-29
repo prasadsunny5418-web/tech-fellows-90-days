@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Demo</title>
+</head>
+<body>
+
+  <header>
+    <h1>Student Registration Demo</h1>
+  </header>
+
+  <main>
+  <p>Notice: This form is for practice only.</p>
+
+  <form action="#">
+    <div>
+      <label for="fullName">Full Name:</label>
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        required
+        minlength="2"
+      >
+    </div>
+
+    <div>
+      <label for="email">Email Address:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+      >
+    </div>
+
+    <div>
+      <label for="age">Age:</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        min="16"
+        max="100"
+        required
+      >
+    </div>
+
+    <div>
+      <label for="course">Course:</label>
+      <select id="course" name="course" required>
+        <option value="">Select a course</option>
+        <option value="bca">BCA</option>
+        <option value="bba">BBA</option>
+        <option value="bcom">B.Com</option>
+        <option value="bsc">B.Sc</option>
+      </select>
+    </div>
+
+    <fieldset>
+      <legend>Study Mode:</legend>
+
+      <input type="radio" id="online" name="studyMode" value="online" required>
+      <label for="online">Online</label>
+
+      <input type="radio" id="offline" name="studyMode" value="offline">
+      <label for="offline">Offline</label>
+    </fieldset>
+
+    <div>
+      <label for="goals">Learning Goals:</label>
+      <textarea
+        id="goals"
+        name="goals"
+        rows="4"
+        placeholder="Write your learning goals..."
+      ></textarea>
+    </div>
+
+    <div>
+      <input
+        type="checkbox"
+        id="practiceData"
+        name="practiceData"
+        required
+      >
+      <label for="practiceData">
+        I confirm this is practice data.
+      </label>
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+</main>
+
+  <footer>
+    <p>Student Registration Demo &copy; 2026</p>
+  </footer>
+
+</body>
+</html>
