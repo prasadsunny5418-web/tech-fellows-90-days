@@ -1,77 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunny's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Accessible Practice Page</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-        </nav>
-    </header>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! My name is Sunny. I am learning web development and building projects using HTML, CSS, JavaScript, and React.</p>
-        </section>
-        <section>
-    <h2>My Weekly Learning Schedule</h2>
+  <header>
+    <a href="/" class="logo">Site Logo</a>
 
-    <table border="1">
-        <caption>My weekly web development activities and their evidence</caption>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#comparison">Comparison</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main id="main-content">
+
+   
+    <section aria-labelledby="overview-heading">
+      <header>
+        <h1 id="overview-heading">Product Overview</h1>
+        <p class="subtitle">Streamline your workflow with key features.</p>
+      </header>
+      <p>Detailed information about the application core services...</p>
+    </section>
+
+
+    <section aria-labelledby="features-heading">
+      <h2 id="features-heading">Key Features</h2>
+      
+      <article>
+        <h3>Fast Performance</h3>
+        <p>Built with efficiency in mind.</p>
+      </article>
+
+      <article>
+        <h3>Accessible Design</h3>
+        <p>Designed for all users according to WCAG standards.</p>
+      </article>
+    </section>
+    <section aria-labelledby="comparison-heading">
+      <h2 id="comparison-heading">Plan Comparison</h2>
+      <p>Compare our standard features across different service tiers.</p>
+      
+      <table border="1" style="border-collapse: collapse; width: 100%; text-align: left;">
+        <caption>Comparison of features between Free and Pro tiers</caption>
         <thead>
-            <tr>
-                <th scope="col">Day</th>
-                <th scope="col">Topic</th>
-                <th scope="col">Evidence</th>
-            </tr>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Free Tier</th>
+            <th scope="col">Pro Tier</th>
+          </tr>
         </thead>
-
         <tbody>
-            <tr>
-                <th scope="row">Day 1</th>
-                <td>Web Foundations</td>
-                <td>First HTML Page</td>
-            </tr>
-            <tr>
-                <th scope="row">Day 2</th>
-                <td>HTML Structure</td>
-                <td>Profile Page</td>
-            </tr>
-            <tr>
-                <th scope="row">Day 3</th>
-                <td>Links and Paths</td>
-                <td>Two Connected Pages</td>
-            </tr>
-            <tr>
-                <th scope="row">Day 4</th>
-                <td>HTML Tables</td>
-                <td>Weekly Schedule</td>
-            </tr>
-            <tr>
-                <th scope="row">Day 5</th>
-                <td>Images and Accessibility</td>
-                <td>Image with Alt Text</td>
-            </tr>
+          <tr>
+            <th scope="row">Storage Space</th>
+            <td>5 GB</td>
+            <td>100 GB</td>
+          </tr>
+          <tr>
+            <th scope="row">Support</th>
+            <td>Community</td>
+            <td>24/7 Priority</td>
+          </tr>
+          <tr>
+            <th scope="row">Custom Domain</th>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
         </tbody>
-        <tfoot>
-    <tr>
-        <th scope="row" colspan="2">Total Activities</th>
-        <td>5 Activities</td>
-    </tr>
-</tfoot>
-    </table>
-</section>
-    </main>
+      </table>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Sunny. All rights reserved.</p>
-    </footer>
+    <section aria-labelledby="feedback-heading">
+      <h2 id="feedback-heading">Practice Feedback Form</h2>
+      <p>Please share your thoughts. <em>Note: This is a practice-only static page; please do not enter any real sensitive personal data.</em></p>
+      
+      <form action="#" method="POST">
+       
+        <div>
+          <label for="user-name">Full Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="user-name" name="user-name" required aria-required="true" placeholder="Enter your name">
+        </div>
+
+        <div>
+          <label for="user-email">Email Address <span aria-hidden="true">*</span></label>
+          <input type="email" id="user-email" name="user-email" required aria-required="true" placeholder="name@example.com">
+        </div>
+
+        <fieldset>
+          <legend>How satisfied are you with this page? <span aria-hidden="true">*</span></legend>
+          <div>
+            <input type="radio" id="sat-high" name="satisfaction" value="high" required>
+            <label for="sat-high">Very Satisfied</label>
+          </div>
+          <div>
+            <input type="radio" id="sat-med" name="satisfaction" value="medium">
+            <label for="sat-med">Neutral</label>
+          </div>
+          <div>
+            <input type="radio" id="sat-low" name="satisfaction" value="low">
+            <label for="sat-low">Needs Improvement</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <nav aria-label="Footer Navigation">
+      <ul>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Your Company. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
